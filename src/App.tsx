@@ -1,5 +1,5 @@
 import { AnimatePresence, motion } from 'motion/react';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import Countdown from './components/Countdown';
 import Couple from './components/Couple';
 import Details from './components/Details';
@@ -14,6 +14,11 @@ import WeddingGift from './components/WeddingGift';
 
 export default function App() {
   const [isOpened, setIsOpened] = useState(false);
+
+  useEffect(() => {
+    const el = document.getElementById('static-cover');
+    if (el) el.style.display = 'none';
+  }, []);
 
   return (
     <main className="relative selection:bg-primary-brown selection:text-white">
@@ -84,15 +89,7 @@ export default function App() {
         </div>
       </footer>
 
-      {/* Simple Overlay for Mobile Navigation Hint */}
-      <AnimatePresence>
-        <motion.div 
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ delay: 2 }}
-          className="fixed bottom-0 left-0 w-full h-1 bg-primary-brown/20 z-40"
-        />
-      </AnimatePresence>
+      <div className="fixed bottom-0 left-0 w-full h-1 bg-primary-brown/20 z-40" />
     </main>
   );
 }

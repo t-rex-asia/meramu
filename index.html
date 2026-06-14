@@ -5,10 +5,77 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/x-icon" href="/favicon.ico" />
     <title>Undangan Pernikahan Rezky & Mutiara</title>
+
+    <!-- Preconnect to Google Fonts (non-blocking) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Load fonts async so they don't block render -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap"
+      media="print"
+      onload="this.media='all'"
+    />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@300;400;500&display=swap" />
+    </noscript>
+
+    <!-- Static cover shown instantly before React loads -->
+    <style>
+      #static-cover {
+        position: fixed; inset: 0; z-index: 9999;
+        background: #FAF9F6;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center;
+        padding: 2rem;
+      }
+      #static-cover .sc-label {
+        font-size: 10px; letter-spacing: 0.3em;
+        text-transform: uppercase; color: #4A3728;
+        opacity: 0.6; margin-bottom: 1rem;
+        font-family: Inter, sans-serif; font-weight: 500;
+      }
+      #static-cover h1 {
+        font-size: clamp(2.5rem, 8vw, 5rem);
+        font-family: Georgia, "Times New Roman", serif;
+        color: #4A3728; font-weight: 300;
+        margin: 0; line-height: 1.1; text-align: center;
+      }
+      #static-cover .sc-line {
+        width: 6rem; height: 1px;
+        background: #4A3728; margin: 1.5rem auto;
+      }
+      #static-cover .sc-bottom {
+        position: absolute; bottom: 3rem; left: 50%;
+        transform: translateX(-50%);
+        display: flex; align-items: center; gap: 1rem; opacity: 0.2;
+      }
+      #static-cover .sc-bottom span {
+        font-size: 10px; letter-spacing: 0.3em;
+        text-transform: uppercase; color: #4A3728;
+        font-family: Inter, sans-serif;
+      }
+      #static-cover .sc-bottom .sc-hr {
+        width: 6rem; height: 1px; background: #4A3728;
+      }
+    </style>
   </head>
   <body>
+    <!-- Shown instantly before React JS loads -->
+    <div id="static-cover">
+      <div>
+        <p class="sc-label">The Wedding of</p>
+        <h1>Rezky &amp; Mutiara</h1>
+        <div class="sc-line"></div>
+      </div>
+      <div class="sc-bottom">
+        <div class="sc-hr"></div>
+        <span>2026</span>
+        <div class="sc-hr"></div>
+      </div>
+    </div>
+
     <div id="root"></div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-
