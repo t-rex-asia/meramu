@@ -46,67 +46,52 @@ export default function Gallery() {
           <ChevronRight className="w-5 h-5 text-primary-brown" />
         </button>
 
-<div
+        <div
           ref={scrollRef}
           className="overflow-x-auto px-16 py-2"
           style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
         >
           <div className="flex flex-col gap-3 w-max">
-            {/* Baris atas */}
             <div className="flex gap-3">
               {row1.map((url, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: -20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: (index % 8) * 0.05 }}
-                  className={`relative flex-shrink-0 overflow-hidden group border border-primary-brown/10 h-[220px] bg-primary-light/60 ${widths[index % widths.length]}`}
+                  className={`relative flex-shrink-0 overflow-hidden group border border-primary-brown/10 h-[220px] bg-stone-100 ${widths[index % widths.length]}`}
                 >
                   <img
                     src={url}
                     alt=""
-                    loading="lazy"
+                    loading={index < 4 ? 'eager' : 'lazy'}
                     decoding="async"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                </motion.div>
+                </div>
               ))}
             </div>
 
-            {/* Baris bawah */}
             <div className="flex gap-3">
               {row2.map((url, index) => (
-                <motion.div
+                <div
                   key={index}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ delay: (index % 8) * 0.05 }}
-                  className={`relative flex-shrink-0 overflow-hidden group border border-primary-brown/10 h-[220px] ${widths[(index + 2) % widths.length]}`}
+                  className={`relative flex-shrink-0 overflow-hidden group border border-primary-brown/10 h-[220px] bg-stone-100 ${widths[(index + 2) % widths.length]}`}
                 >
                   <img
                     src={url}
                     alt=""
-                    loading="lazy"
+                    loading={index < 4 ? 'eager' : 'lazy'}
                     decoding="async"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
                   />
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
         </div>
       </div>
 
-      <motion.p
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        className="text-center mt-6 pb-4 text-[10px] uppercase tracking-[0.3em] text-primary-brown/40 font-serif"
-      >
+      <p className="text-center mt-6 pb-4 text-[10px] uppercase tracking-[0.3em] text-primary-brown/40 font-serif">
         Geser untuk melihat lebih banyak
-      </motion.p>
+      </p>
     </section>
   );
 }
