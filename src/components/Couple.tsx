@@ -53,9 +53,10 @@ export default function Couple() {
             >
               <div className="relative mb-12 group">
                 <div className="w-72 h-96 overflow-hidden transition-all duration-700 border border-primary-brown/10">
-                  <img 
-                    src={person.image} 
-                    alt={person.name} 
+                  <img
+                    src={person.image}
+                    alt={person.name}
+                    loading="eager"
                     className="w-full h-full object-cover scale-110 group-hover:scale-100 transition-transform duration-1000"
                   />
                 </div>

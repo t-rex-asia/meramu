@@ -66,6 +66,7 @@ export default function Gallery() {
                   <img
                     src={url}
                     alt=""
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                   />
                 </motion.div>
@@ -86,6 +87,7 @@ export default function Gallery() {
                   <img
                     src={url}
                     alt=""
+                    loading="lazy"
                     className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                   />
                 </motion.div>
