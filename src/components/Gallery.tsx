@@ -61,12 +61,13 @@ export default function Gallery() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: (index % 8) * 0.05 }}
-                  className={`relative flex-shrink-0 overflow-hidden group border border-primary-brown/10 h-[220px] ${widths[index % widths.length]}`}
+                  className={`relative flex-shrink-0 overflow-hidden group border border-primary-brown/10 h-[220px] bg-primary-light/60 ${widths[index % widths.length]}`}
                 >
                   <img
                     src={url}
                     alt=""
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                   />
                 </motion.div>
@@ -88,6 +89,7 @@ export default function Gallery() {
                     src={url}
                     alt=""
                     loading="lazy"
+                    decoding="async"
                     className="w-full h-full object-cover group-hover:scale-105 transition-all duration-700"
                   />
                 </motion.div>
