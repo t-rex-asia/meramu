@@ -1,8 +1,11 @@
+/* Self-hosted variable fonts - 2 files cover all weights/styles, no Google Fonts request */
+@import '@fontsource-variable/cormorant/wght-italic.css';
+@import '@fontsource-variable/inter/index.css';
 @import "tailwindcss";
 
 @theme {
-  --font-serif: "Cormorant Garamond", serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant", serif;
+  --font-sans: "Inter Variable", "Inter", ui-sans-serif, system-ui, sans-serif;
   
   --color-primary-light: #FAF9F6;
   --color-primary-brown: #4A3728;
