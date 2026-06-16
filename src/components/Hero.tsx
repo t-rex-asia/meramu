@@ -76,7 +76,7 @@ export default function Hero() {
               Konfirmasi Kehadiran
             </a>
             <p className="text-[10px] italic opacity-50 mt-4 tracking-wider uppercase">
-              Mohon konfirmasi sebelum 1 Desember 2026.
+              Mohon konfirmasi sebelum 25 Juni 2026.
             </p>
 
             {/* Dress Code */}
