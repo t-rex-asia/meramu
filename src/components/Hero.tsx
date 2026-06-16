@@ -81,8 +81,8 @@ export default function Hero() {
 
             {/* Dress Code */}
             <div className="pt-8 border-t border-primary-brown/10 mt-8">
-              <p className="label-sm mb-4">Dress Code</p>
-              <div className="flex flex-wrap gap-3">
+              <p className="label-sm mb-5">Dress Code</p>
+              <div className="grid grid-cols-3 gap-x-4 gap-y-5">
                 {[
                   { name: 'Nude',         hex: '#E8C9A8' },
                   { name: 'Beige',        hex: '#E0D4C0' },
@@ -91,12 +91,12 @@ export default function Hero() {
                   { name: 'Baby Blue',    hex: '#A8C0D8' },
                   { name: 'Dusty Pink',   hex: '#D4A0A8' },
                 ].map((color) => (
-                  <div key={color.name} className="flex flex-col items-center gap-1">
+                  <div key={color.name} className="flex flex-col items-center gap-2">
                     <div
-                      className="w-9 h-9 rounded-full border border-primary-brown/15 shadow-sm"
+                      className="w-10 h-10 rounded-full border border-primary-brown/15 shadow-sm"
                       style={{ backgroundColor: color.hex }}
                     />
-                    <span className="text-[8px] uppercase tracking-[0.15em] opacity-50 text-center leading-tight">
+                    <span className="text-[8px] uppercase tracking-[0.12em] opacity-50 text-center leading-tight">
                       {color.name}
                     </span>
                   </div>
