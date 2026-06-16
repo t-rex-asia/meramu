@@ -2,7 +2,7 @@ import { motion } from 'motion/react';
 
 export default function Hero() {
   return (
-    <section className="relative h-screen flex flex-col overflow-hidden bg-primary-light p-8 md:p-12 pt-32 md:pt-40">
+    <section className="relative min-h-screen flex flex-col bg-primary-light p-8 md:p-12 pt-32 md:pt-40">
       {/* Watermark Background */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[20vw] md:text-[250px] font-serif italic text-primary-brown/5 pointer-events-none select-none whitespace-nowrap z-0">
         M & R
@@ -78,6 +78,31 @@ export default function Hero() {
             <p className="text-[10px] italic opacity-50 mt-4 tracking-wider uppercase">
               Mohon konfirmasi sebelum 1 Desember 2026.
             </p>
+
+            {/* Dress Code */}
+            <div className="pt-8 border-t border-primary-brown/10 mt-8">
+              <p className="label-sm mb-4">Dress Code</p>
+              <div className="flex flex-wrap gap-3">
+                {[
+                  { name: 'Nude',         hex: '#E8C9A8' },
+                  { name: 'Beige',        hex: '#E0D4C0' },
+                  { name: 'Cokelat Muda', hex: '#C4A882' },
+                  { name: 'Sage Green',   hex: '#8FA87C' },
+                  { name: 'Baby Blue',    hex: '#A8C0D8' },
+                  { name: 'Dusty Pink',   hex: '#D4A0A8' },
+                ].map((color) => (
+                  <div key={color.name} className="flex flex-col items-center gap-1">
+                    <div
+                      className="w-9 h-9 rounded-full border border-primary-brown/15 shadow-sm"
+                      style={{ backgroundColor: color.hex }}
+                    />
+                    <span className="text-[8px] uppercase tracking-[0.15em] opacity-50 text-center leading-tight">
+                      {color.name}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
           </motion.div>
         </div>
       </div>

@@ -119,33 +119,6 @@ export default function RSVP() {
             </motion.div>
           )}
 
-          {/* Dress Code */}
-          <div className="border-t border-primary-brown/10 pt-12 space-y-8">
-            <div className="text-center space-y-2">
-              <span className="label-sm">Dress Code</span>
-              <p className="text-sm font-serif italic opacity-60">Kami mengharapkan kehadiran Anda dengan nuansa warna berikut</p>
-            </div>
-            <div className="flex flex-wrap justify-center gap-6">
-              {[
-                { name: 'Nude',         hex: '#E8C9A8' },
-                { name: 'Beige',        hex: '#E0D4C0' },
-                { name: 'Cokelat Muda', hex: '#C4A882' },
-                { name: 'Sage Green',   hex: '#8FA87C' },
-                { name: 'Baby Blue',    hex: '#A8C0D8' },
-                { name: 'Dusty Pink',   hex: '#D4A0A8' },
-              ].map((color) => (
-                <div key={color.name} className="flex flex-col items-center gap-2">
-                  <div
-                    className="w-12 h-12 rounded-full border border-primary-brown/10 shadow-sm"
-                    style={{ backgroundColor: color.hex }}
-                  />
-                  <span className="text-[9px] uppercase tracking-[0.2em] text-primary-brown/60 text-center leading-tight">
-                    {color.name}
-                  </span>
-                </div>
-              ))}
-            </div>
-          </div>
         </motion.div>
       </div>
     </section>
