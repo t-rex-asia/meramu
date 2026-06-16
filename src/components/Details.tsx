@@ -5,7 +5,7 @@ const eventDetails = [
   {
     role: "Akad",
     title: "Akad Nikah",
-    date: "Sabtu, 26 Juni 2026",
+    date: "Jumat, 26 Juni 2026",
     time: "08.00 - 10.00 WIB",
     location: "Kediaman Mutiara",
     address: "Dsn. Ngambon, RT/RW. 07/010, Jambekumbu, Pasrujambe, Kab. Lumajang",
@@ -15,7 +15,7 @@ const eventDetails = [
   {
     role: "Resepsi",
     title: "Resepsi Pernikahan",
-    date: "Sabtu, 26 Juni 2026",
+    date: "Jumat, 26 Juni 2026",
     time: "13.00 - Selesai",
     location: "Kediaman Mutiara",
     address: "Dsn. Ngambon, RT/RW. 07/010, Jambekumbu, Pasrujambe, Kab. Lumajang",
